@@ -1,69 +1,83 @@
-# Connexta
+Connexta (REST API & Backend Architecture)
+==========================================
 
-**Connexta** is a networking and outreach tracker designed to help professionals and students manage their connections, follow-ups, and next actions. It’s a full-stack MERN application built for tracking interactions, managing contacts, and staying on top of networking goals.
+> **🚧 Project Status: Backend Complete / Frontend Paused** The backend RESTful API (Node/Express/MongoDB) is fully implemented, featuring JWT authentication, complex database relationships, and secure data handling. The React frontend is currently paused and was primarily used as a client-side testing environment for API integration.
 
----
+**Connexta** is a networking and outreach tracker designed to help professionals manage their connections, follow-ups, and next actions. This repository serves as a showcase for building a robust, secure, and scalable MERN stack backend.
 
-## Features
+* * * * *
 
-- **User Authentication**: Secure signup/login with JWT.
-- **Contacts Management**: Add, edit, delete, and categorize your contacts.
-- **Interaction Timeline**: Log DMs, emails, calls, and meetings with notes.
-- **Next Actions Dashboard**: See upcoming follow-ups and reminders.
-- **Pipeline View**: Track contacts by stage (Prospect → Reached Out → Scheduled → Referred → Interviewing).
-- **Search & Filters**: Quickly find contacts by name, company, or stage.
-- **CSV Import** _(Stretch feature)_: Bulk upload contacts from CSV files.
-- **Time Zone Awareness**: Schedule outreach based on local time of your contacts.
+⚙️ Core Backend Features
+------------------------
 
----
+-   **Secure User Authentication**: Full signup/login flow utilizing JWT (JSON Web Tokens) and bcrypt password hashing.
 
-## Tech Stack
+-   **Relational Database Design**: Complex Mongoose models linking Users to their specific Contacts and Interaction Timelines.
 
-**Backend**: Node.js, Express, MongoDB, Mongoose, JWT, bcrypt
-**Frontend**: React, React Router v6, React Hook Form, Tailwind CSS  
-**Dev Tools**: Nodemon, Postman, ESLint, Prettier  
-**Deployment**: Vercel (frontend), Render (backend)
+-   **Full CRUD API**: Endpoints to add, edit, delete, and categorize contacts and pipeline stages (Prospect → Reached Out → Scheduled, etc.).
 
----
+-   **Filtering & Search Logic**: Backend controllers optimized to quickly query and return specific contacts by name, company, or pipeline stage.
 
----
+🖥️ Client-Side Testing (React)
+-------------------------------
 
-## Getting Started
+*Note: The frontend is a paused work-in-progress used to validate API responses.*
+
+-   React Router v6 for navigation.
+
+-   React Hook Form for payload structuring.
+
+-   Tailwind CSS for rapid prototyping.
+
+* * * * *
+
+🛠️ Tech Stack
+--------------
+
+**Backend**: Node.js, Express, MongoDB, Mongoose, JWT, bcrypt **Frontend**: React, React Router v6, React Hook Form, Tailwind CSS
+
+**Dev Tools**: Nodemon, Postman, ESLint, Prettier
+
+* * * * *
+
+🚀 Getting Started
+------------------
 
 ### Prerequisites
 
-- Node.js v18+
-- MongoDB (local or Atlas)
-- npm or yarn
+-   Node.js v18+
 
-### Backend Setup
+-   MongoDB (local or Atlas)
 
-1. Navigate to backend:
+-   npm or yarn
 
+### 1\. Backend Setup (Primary)
+
+Navigate to the backend directory and install dependencies:
+
+```
 cd backend
-
-Install dependencies:
-
 npm install
 
-Create .env based on .env.example and add your MongoDB URI and JWT secret.
+```
 
-Start server:
+Create a `.env` file based on `.env.example` and add your MongoDB URI and JWT secret. Start the development server:
 
+
+
+```
 npm run dev
 
-Frontend Setup
+```
 
-Navigate to frontend:
+### 2\. Frontend Setup (Optional/Testing)
 
+Navigate to the frontend directory:
+
+
+
+```
 cd frontend
-
-Install dependencies:
-
 npm install
-
-Start React dev server:
-
 npm run dev
-
-All rights reserved
+```
